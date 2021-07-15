@@ -1,0 +1,46 @@
+.noteform {
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto;
+}
+.nf__form {
+  display: flex;
+  width: 80%;
+  max-width: 600px;
+  /* border: 1px solid rgb(199, 199, 199); */
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif !important;
+  box-shadow: 0 3px 5px rgba(0, 0, 0,  0.2);
+}
+.titleInput {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  margin: 10px;
+  width: 80%;
+}
+
+.noteInput {
+  border: none;
+  outline: none;
+  margin: 10px;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form__footer {
+  margin-top: 20px;
+}
+.form__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__footer > .MuiButton-root {
+  text-transform: none;
+  color: rgb(68, 68, 68);
+}

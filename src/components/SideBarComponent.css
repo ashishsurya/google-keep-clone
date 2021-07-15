@@ -1,0 +1,40 @@
+.sidebarcomponent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 12px;
+  border-radius: 0 25px 25px 0;
+  min-width: 15px;
+  max-width: 300px;
+  height: 48px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebarcomponent:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.sbc__title {
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sbc__icon {
+  color: gray !important;
+}
+
+.bg-yes {
+  background-color: #feefc3;
+  color: rgb(65, 65, 65) !important;
+}
+
+.bg-yes:hover {
+  background-color: #feefc3;
+}
+
+@media screen and (max-width: 460px) {
+  .sbc__title {
+    display: none;
+  }
+}

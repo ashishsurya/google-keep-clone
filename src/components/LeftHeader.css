@@ -1,0 +1,18 @@
+.leftheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo {
+  width: 40px;
+  height: auto;
+  /* cursor: pointer; */
+  margin: 0 10px;
+}
+
+.logo__title{
+  font-size: 22px;
+  color: gray;
+}

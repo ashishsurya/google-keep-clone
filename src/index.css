@@ -1,5 +1,31 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+/* GLOBAL STYLING FOR THE ICONS */
+.menuicon {
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: gray !important;
+}
+
+.menuicon:hover {
+  background-color: rgb(231, 231, 231);
+  border-radius: 50%;
+  color: rgb(48, 48, 48) !important;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.non__header {
+  display: flex;
+  margin-top: 10px;
+  height: calc(100% - 68px);
+  justify-content: space-between;
 }
