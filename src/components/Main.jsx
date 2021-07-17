@@ -1,16 +1,15 @@
-import React from 'react'
-import { useRef } from 'react'
-import './Main.css'
-import NoteForm from './NoteForm'
+import React from 'react';
+import './Main.css';
+import NoteForm from './NoteForm';
+import NoteListGrid from './NoteListGrid';
+
 const Main = () => {
-
-const inputNoteRef = useRef(null) 
-
   return (
     <div className='main'>
-      <NoteForm inputNoteRef={inputNoteRef}/>
+      <NoteForm />
+      <NoteListGrid />
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

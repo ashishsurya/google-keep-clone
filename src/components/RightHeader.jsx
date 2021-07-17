@@ -1,4 +1,4 @@
-import { IconButton } from '@material-ui/core';
+import { Avatar, Button, IconButton } from '@material-ui/core';
 import {
   Apps,
   PersonOutline,
@@ -8,13 +8,14 @@ import {
   ViewStreamOutlined,
 } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../firebase';
 import './RightHeader.css';
 import SearchBarComponent from './SearchBarComponent';
 
 const RightHeader = () => {
+  const [user] = useAuthState(auth);
   const [width, setWidth] = useState(window.innerWidth);
-
-  console.log(width);
 
   const searchBarBoolean = width >= 771;
 
@@ -28,6 +29,10 @@ const RightHeader = () => {
       window.removeEventListener('reset', resizeCallBack);
     };
   });
+
+  const logout = () => {
+    auth.signOut();
+  };
 
   return (
     <div className='rightheader'>
@@ -55,9 +60,9 @@ const RightHeader = () => {
         <Apps />
       </IconButton>
       {/* Profile Icon */}
-      <IconButton>
-        <PersonOutline />
-      </IconButton>
+      <Button style={{borderRadius:"50%"}}  onClick={logout}>
+        <Avatar className='avatar' src={user.photoURL} />
+      </Button>
     </div>
   );
 };

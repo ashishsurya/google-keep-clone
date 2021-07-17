@@ -26,3 +26,8 @@
 .searchbarcomponent > input:focus {
   outline: none;
 }
+
+.searchbaricon{
+  color: gray;
+  margin: 0 5px;
+}

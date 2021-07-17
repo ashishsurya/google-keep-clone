@@ -4,7 +4,13 @@
 
   margin: 0 auto;
 }
+
+::placeholder {
+  color: rgba(168, 168, 168, 0.87);
+}
+
 .nf__form {
+  position: relative;
   display: flex;
   width: 80%;
   max-width: 600px;
@@ -13,34 +19,46 @@
   padding: 10px;
   border-radius: 8px;
   font-family: 'Roboto', sans-serif !important;
-  box-shadow: 0 3px 5px rgba(0, 0, 0,  0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  box-shadow: 5px 5px 10px #c3c3c3, -5px -5px 10px #fdfdfd;
 }
 .titleInput {
   border: none;
   outline: none;
   font-family: inherit;
+  font-size: 16px;
   margin: 10px;
   width: 80%;
+  color: #646464;
+  padding: 10px 0;
 }
 
-.noteInput {
-  border: none;
-  outline: none;
+.nf__noteInp > .MuiTextField-root {
   margin: 10px;
+  border: none;
   width: 100%;
-  font-family: inherit;
+  padding-right: 10px;
 }
 
-.form__footer {
-  margin-top: 20px;
-}
 .form__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 5px;
 }
 
 .form__footer > .MuiButton-root {
   text-transform: none;
-  color: rgb(68, 68, 68);
+  background: linear-gradient(to right, #ffde7a, #ffce3a);
+  color: white !important;
+}
+
+.form__footer > .MuiButton-root:hover {
+  background: linear-gradient(to right, #ffc004, #ffce3a);
+}
+
+.note__pinIcon {
+  position: absolute;
+  right: 3px;
 }
